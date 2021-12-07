@@ -8,7 +8,7 @@ A GUI automation bot for the classic 2000's game Runescape. Please note I've onl
 
 - NodeJS
 - Javascript
-- Gitbash
+- RobotsJS - NPM library for Desktop Automation which can be found [here](https://www.npmjs.com/package/robotjs)
 
 **Key Takeaways**
 
