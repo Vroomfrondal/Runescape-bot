@@ -1,3 +1,9 @@
-const Testing = "NodeJs Environment Testing ////// "
+// import the robotjs library
 
-console.log(Testing)
+let robot = require('robotjs')
+
+console.log("Starting.....")
+console.log("Done.")
+
+robot.moveMouse(0, 0)
+
