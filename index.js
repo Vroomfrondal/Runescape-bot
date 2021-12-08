@@ -1,8 +1,17 @@
-console.log("Starting...")
-console.log("Done.")
-
 // import the robotjs library
-let robot = require('robotjs')
+let robot = require('robotjs') //
 
-// Move the mouse across the screen top left corner
-robot.moveMouse(500, 500)
+
+function main() {
+
+    // Move the mouse across the screen top left corner
+    console.log("Starting...")
+    robot.moveMouse(0, 0)
+    console.log("Done.")
+}
+
+ main()
+
+
+
+
