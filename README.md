@@ -1,4 +1,4 @@
-# Runescape-bot
+# Runescape-bot (v1 in development)
 
 A GUI automation bot for the classic 2000's game Runescape.
 
