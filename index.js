@@ -10,8 +10,8 @@ function main() {
         let tree = findTree()
         // if no tree can be found, don't execute
         if (tree == false) {
-            console.log("No Tree in sight.")
-            break
+            rotateCamera()
+            continue
         }
 
         //chop down tree found in image screenshot function
@@ -27,13 +27,31 @@ function findTree() {
     let img = robot.screen.capture(x, y, width, height) //1440p screen
 
     //array for tree color hex values
-    let tree_colors = ["735835", "765B37", "664E2E", "7A5D39", "5B462A", "705634", "80623A"]
+    let tree_colors = ["735835", "765B37", "664E2E", "7A5D39", "5B462A", "705634", "80623A", "475428"]
 
-    for (var i = 0; i < 100; i ++ ) { // iterator loop > less than 100 > increase i by 1
-        let random_x =
-        let random_y = 
+    for (var i = 0; i < 1000; i ++ ) { // iterator loop > less than 100 > increase i by 1
+        let random_x = getRandomInt(0, width - 1) // random int between 0-199
+        let random_y = getRandomInt(0, height - 1) // random int between 0-199
         let sample_color = img.colorAt(random_x, random_y)
 
+        if (tree_colors.includes(sample_color)) {
+            let screen_x = random_x + x
+            let screen_y = random_y + y
+            
+            console.log("Found a tree at: " + screen_x + ", " + screen_y + ", " + " color #" + sample_color)
+            return {x: screen_x, y: screen_y}
+        }
+    }
+    // did not find the color in our screenshot
+    return false
+}
+
+function rotateCamera() {
+    console.log("Rotating Camera")
+
+    robot.keyToggle("right", "down")
+    sleep(1000)
+    robot.keyToggle("right", "up")
 }
 
 
@@ -45,6 +63,7 @@ function dropLogs() {
     robot.mouseClick('right')
     robot.moveMouse(inventory_location_x, inventory_location_y + 69) // relative-motion
     robot.mouseClick()
+    console.log("Dropped logs")
     sleep(1000)
 }
 
