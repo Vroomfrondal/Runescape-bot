@@ -22,7 +22,6 @@ A GUI automation bot for the classic 2000's game Runescape.
 
 **Key Takeaways**
 
-- Better understanding of JS, including while loops
 - NodeJS is awesome
 - Javascript libraries are a beautiful thing
 
