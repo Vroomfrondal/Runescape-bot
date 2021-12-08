@@ -14,8 +14,18 @@ A GUI automation bot for the classic 2000's game Runescape.
 
 - Download and install [NodeJS](https://nodejs.org/en/download/)
 - in your console, "npm install robotjs" will install the robotsjs library node-modules
-- Use a private server (unless you want rapidly banned on Runescape). I prefer [this one](https://ikov.io/).
+- Use a private server (unless you want rapidly banned on Runescape). I prefer [this one](https://ikov.io/)
 
 **References**
 
 - [NpmSleep](https://www.npmjs.com/package/sleep)
+
+**Key Takeaways**
+
+- Better understanding of JS, including while loops
+- NodeJS is awesome
+- Javascript libraries are a beautiful thing
+
+- Variables
+- Methods
+- While loops

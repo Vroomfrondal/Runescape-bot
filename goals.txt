@@ -4,3 +4,4 @@ Create Woodcutting bot:
 
 1) first, test enviorment is working with a hello world app
 2) Create a sleep function (google NPM sleep) to start and stop the app depending on MS
+3) 
