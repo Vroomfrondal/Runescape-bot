@@ -29,3 +29,4 @@ A GUI automation bot for the classic 2000's game Runescape.
 - Variables
 - Methods
 - While loops
+- Relative motion mouse-movements
