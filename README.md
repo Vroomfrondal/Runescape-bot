@@ -1,6 +1,6 @@
 # Runescape-bot
 
-A GUI automation bot for the classic 2000's game Runescape. Please note I've only developed this on private servers to therefore not effect the integrity of the game. As botting for personal reasons, even coding practice, is against the game-rules.
+A GUI automation bot for the classic 2000's game Runescape.
 
 **A word of warning**: running this script on a Jagex owned server will most likely result in you being banned.
 

@@ -8,7 +8,13 @@ function main() {
     sleep(4000)
     
     // Move mouse + click to location of tree
-    robot.moveMouse(1090, 696)
+    robot.moveMouse(1127, 662)
+    robot.mouseClick()
+
+    sleep(8000)
+
+    // move mouse + click to location of respawned tree
+    robot.moveMouse(1127, 662)
     robot.mouseClick()
 
     console.log("Done.")
