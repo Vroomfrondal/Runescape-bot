@@ -63,6 +63,13 @@ function dropLogs() {
 
     let pixel_color = robot.getPixelColor(inventory_location_x, inventory_location_y);
 
+    let wait_cycles = 0 
+    let max_wait_cycles = 9
+    while (pixel_color != inventory_log_color && wait_cycles < max_wait_cycles) {
+        sleep(1000)
+        robot.getPixelColor(inventory_location_x, inventory_location_y);
+        wait_cycles ++
+    }
     console.log("Inventory log color is: " + pixel_color)
 
     if (pixel_color == inventory_log_color || inventory_log_color_oak) {
