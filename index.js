@@ -38,8 +38,12 @@ function findTree() {
             let screen_x = random_x + x
             let screen_y = random_y + y
             
-            console.log("Found a tree at: " + screen_x + ", " + screen_y + ", " + " color #" + sample_color)
-            return {x: screen_x, y: screen_y}
+            if (confirmTree(screen_x, screen_y)) {
+                console.log("Found a tree at: " + screen_x + ", " + screen_y + ", " + " color #" + sample_color)
+                return {x: screen_x, y: screen_y}
+            } else {
+                console.log("Unconfirmed tree at: " + screen_x + ", " + screen_y + ", " + " color #" + sample_color)
+            }
         }
     }
     // did not find the color in our screenshot
@@ -52,6 +56,19 @@ function rotateCamera() {
     robot.keyToggle("right", "down")
     sleep(1000)
     robot.keyToggle("right", "up")
+}
+
+function confirmTree(screen_x, screen_y) {
+    //move mouse to given coordinates
+    robot.moveMouse(screen_x, screen_y)
+    //wait for help text to appear
+    sleep(300)
+    // now check color of action text (this is where it breaks)
+    let check_x = 103
+    let check_y = 63
+    let pixel_color = robot.getPixelColor(check_x, check_y)
+
+    return pixel_color == "00ffff"
 }
 
 
