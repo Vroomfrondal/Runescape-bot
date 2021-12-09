@@ -1,6 +1,7 @@
 Steps:
 
 1) add willow functionality: check line 79 where you added oak log functionality which is used to drop oak logs but not properly cut them
+    a) to add this, extend timers so you can chop the tree a while
 
 2) update readme that V1 is complete
 
