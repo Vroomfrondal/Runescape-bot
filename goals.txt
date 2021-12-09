@@ -1,8 +1,7 @@
 Steps:
 
-Create Woodcutting bot:
+1) add willow functionality: check line 79 where you added oak log functionality which is used to drop oak logs but not properly cut them
 
+2) update readme that V1 is complete
 
-1) stand in location of tree 2, take picture and get coordinates of tree 1. those coordinates are first_tree_x, first_tree_y
-
-2) get coordinates of second tree. those are second_tree_x, and second_tree_y
+3) create new file. mining.js, that will be a mining bot. node mining.js to run :)

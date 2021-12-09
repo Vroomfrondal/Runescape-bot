@@ -22,6 +22,36 @@ function main() {
     }
 }
 
+function dropLogs() {
+    let inventory_location_x = 2393
+    let inventory_location_y = 1126
+    let inventory_log_color = "765b37"
+    let inventory_log_color_oak = "967445"
+
+    let pixel_color = robot.getPixelColor(inventory_location_x, inventory_location_y);
+
+    let wait_cycles = 0 
+    let max_wait_cycles = 9
+    while (pixel_color != inventory_log_color && wait_cycles < max_wait_cycles) {
+        sleep(1000)
+        robot.getPixelColor(inventory_location_x, inventory_location_y);
+        wait_cycles ++
+    }
+    console.log("Inventory log color is: " + pixel_color)
+
+    if (pixel_color == inventory_log_color || inventory_log_color_oak) {
+        robot.moveMouse(inventory_location_x, inventory_location_y)
+        robot.mouseClick('right')
+        sleep(300)
+        robot.moveMouse(inventory_location_x, inventory_location_y + 69) // relative-motion
+        robot.mouseClick()
+        console.log("Dropped logs")
+        sleep(1000)
+    }
+    //drop inventory
+    
+}
+
 function findTree() {
     let x = 300, y = 300, width = 1300, height = 400
     let img = robot.screen.capture(x, y, width, height) //1440p screen
@@ -29,7 +59,7 @@ function findTree() {
     //array for tree color hex values
     let tree_colors = ["735835", "765B37", "664E2E", "7A5D39", "5B462A", "705634", "80623A"]
 
-    for (var i = 0; i < 1000; i ++ ) { // iterator loop > less than 100 > increase i by 1
+    for (var i = 0; i < 500; i ++ ) { // iterator loop > less than 100 > increase i by 1
         let random_x = getRandomInt(0, width - 1) // random int between 0-199
         let random_y = getRandomInt(0, height - 1) // random int between 0-199
         let sample_color = img.colorAt(random_x, random_y)
@@ -69,37 +99,6 @@ function confirmTree(screen_x, screen_y) {
     let pixel_color = robot.getPixelColor(check_x, check_y)
 
     return pixel_color == "00ffff"
-}
-
-
-function dropLogs() {
-    let inventory_location_x = 2393
-    let inventory_location_y = 1126
-    let inventory_log_color = "765b37"
-    let inventory_log_color_oak = "967445"
-
-    let pixel_color = robot.getPixelColor(inventory_location_x, inventory_location_y);
-
-    let wait_cycles = 0 
-    let max_wait_cycles = 9
-    while (pixel_color != inventory_log_color && wait_cycles < max_wait_cycles) {
-        sleep(1000)
-        robot.getPixelColor(inventory_location_x, inventory_location_y);
-        wait_cycles ++
-    }
-    console.log("Inventory log color is: " + pixel_color)
-
-    if (pixel_color == inventory_log_color || inventory_log_color_oak) {
-        robot.moveMouse(inventory_location_x, inventory_location_y)
-        robot.mouseClick('right')
-        sleep(300)
-        robot.moveMouse(inventory_location_x, inventory_location_y + 69) // relative-motion
-        robot.mouseClick()
-        console.log("Dropped logs")
-        sleep(1000)
-    }
-    //drop inventory
-    
 }
 
 function testScreenCapture() {
