@@ -1,6 +1,6 @@
-# Runescape-bot (v1 in development)
+# Runescape-bot (V1)
 
-A GUI automation bot for the classic 2000's game Runescape.
+An automation robot for the classic 2000's game Runescape. It uses the robotjs NPM library to provide mouse, keepboard, and screenshot bitmapping capabilities. Currently functional on oak and standard tree's in game.
 
 **A word of warning**: running this script on a Jagex owned server will most likely result in you being banned.
 
