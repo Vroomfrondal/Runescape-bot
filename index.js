@@ -17,7 +17,7 @@ function main() {
         //chop down tree found in image screenshot function
         robot.moveMouse(tree.x, tree.y)
         robot.mouseClick()
-        sleep(4000)
+        sleep(3000)
         dropLogs()
     }
 }
@@ -58,13 +58,23 @@ function rotateCamera() {
 function dropLogs() {
     let inventory_location_x = 2393
     let inventory_location_y = 1126
+    let inventory_log_color = "765b37"
+
+    let pixel_color = robot.getPixelColor(inventory_location_x, inventory_location_y);
+
+    //console.log("Inventory log color is: " + pixel_color)
+
+    if (pixel_color == inventory_log_color) {
+        robot.moveMouse(inventory_location_x, inventory_location_y)
+        robot.mouseClick('right')
+        sleep(300)
+        robot.moveMouse(inventory_location_x, inventory_location_y + 69) // relative-motion
+        robot.mouseClick()
+        console.log("Dropped logs")
+        sleep(1000)
+    }
     //drop inventory
-    robot.moveMouse(inventory_location_x, inventory_location_y)
-    robot.mouseClick('right')
-    robot.moveMouse(inventory_location_x, inventory_location_y + 69) // relative-motion
-    robot.mouseClick()
-    console.log("Dropped logs")
-    sleep(1000)
+    
 }
 
 function testScreenCapture() {
