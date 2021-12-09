@@ -59,12 +59,13 @@ function dropLogs() {
     let inventory_location_x = 2393
     let inventory_location_y = 1126
     let inventory_log_color = "765b37"
+    let inventory_log_color_oak = "967445"
 
     let pixel_color = robot.getPixelColor(inventory_location_x, inventory_location_y);
 
-    //console.log("Inventory log color is: " + pixel_color)
+    console.log("Inventory log color is: " + pixel_color)
 
-    if (pixel_color == inventory_log_color) {
+    if (pixel_color == inventory_log_color || inventory_log_color_oak) {
         robot.moveMouse(inventory_location_x, inventory_location_y)
         robot.mouseClick('right')
         sleep(300)
