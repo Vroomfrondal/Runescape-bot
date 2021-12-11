@@ -20,34 +20,6 @@ function main() {
     }
 }
 
-//function findCrab() {
-//    let x = 300, y = 300, width = 1300, height = 400
-//    let img = robot.screen.capture(x, y, width, height) //1440p screen
-//
-//    //array for tree color hex values
-//    let crab_colors = ["676652", "515040", "62614D", "5E604C"]
-//
-//    for (var i = 0; i < 500; i ++ ) { // iterator loop > less than 100 > increase i by 1
-//        let random_x = getRandomInt(0, width - 1) // random int between 0-199
-//        let random_y = getRandomInt(0, height - 1) // random int between 0-199
-//        let sample_color = img.colorAt(random_x, random_y)
-//
-//        if (crab_colors.includes(sample_color)) {
-//            let screen_x = random_x + x
-//            let screen_y = random_y + y
-//            
-//            if (confirmCrab(screen_x, screen_y)) {
-//                console.log("Found a crab at: " + screen_x + ", " + screen_y + ", " + " color #" + sample_color)
-//                return {x: screen_x, y: screen_y}
-//            } else {
-//                console.log("Unconfirmed crab at: " + screen_x + ", " + screen_y + ", " + " color #" + sample_color)
-//            }
-//        }
-//    }
-//    // did not find the color in our screenshot
-//    return false
-//}
-
 function findTree() {
     // take a screenshot from just the middle of our screen.
     // I have the upper left corner of the image starting at x = 300, y = 300, and size of
