@@ -1,4 +1,4 @@
-# Runescape-bot (V1)
+# Runescape-bot (V2 in Development)
 
 An automation robot for the classic 2000's game Runescape. It uses the robotjs NPM library to provide mouse, keyboard, and screen bitmapping capabilities. Currently functional on oak and standard tree's in game.
 
@@ -9,6 +9,11 @@ An automation robot for the classic 2000's game Runescape. It uses the robotjs N
 - RobotsJS - NPM library used for Desktop Automation. Read about it [here](https://www.npmjs.com/package/robotjs)
 - NodeJS
 - Javascript
+
+**Bot's Current Capabilities:**
+
+- Automation of woodcutting normal tree's in lumbridge via index.js
+- Automation of melee training at rock crabs via rockcrabs.js
 
 **Installation**
 
