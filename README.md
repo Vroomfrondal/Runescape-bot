@@ -15,17 +15,17 @@ An automation robot for the classic 2000's game Runescape. It uses the robotjs N
 - Automation of woodcutting normal tree's in lumbridge via index.js
 - Automation of melee training at rock crabs via rockcrabs.js
 
-**Installation**
+**Installation:**
 
 - Download and install [NodeJS](https://nodejs.org/en/download/)
 - in your console, "npm install robotjs" will install the robotsjs library
 - Use a private server (unless you want rapidly banned on Runescape). I prefer [this one](https://ikov.io/)
 
-**References**
+**References:**
 
 - [NpmSleep](https://www.npmjs.com/package/sleep)
 
-**Key Takeaways**
+**Key Takeaways:**
 
 - NodeJS is awesome
 - Javascript libraries are a beautiful thing
