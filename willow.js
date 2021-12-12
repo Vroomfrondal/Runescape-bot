@@ -53,12 +53,14 @@ function dropLogs() {
     
 }
 
+
+
 function findTree() {
     let x = 300, y = 300, width = 1300, height = 400
     let img = robot.screen.capture(x, y, width, height) //1440p screen
 
     //array for tree color hex values
-    let tree_colors = ["735835", "765B37", "664E2E", "7A5D39", "5B462A", "705634", "80623A", "66542E", "504024", "6A5630", "645c39", "575030"]
+    let tree_colors = ["6A5630", "645c39", "575030"]
 
     for (var i = 0; i < 500; i ++ ) { // iterator loop > less than 100 > increase i by 1
         let random_x = getRandomInt(0, width - 1) // random int between 0-199
