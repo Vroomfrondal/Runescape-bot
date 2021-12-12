@@ -17,8 +17,7 @@ function main() {
         //chop down tree found in image screenshot function
         robot.moveMouse(tree.x, tree.y)
         robot.mouseClick()
-        sleep(3000)
-        dropLogs()
+        sleep(12000)
     }
 }
 

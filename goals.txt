@@ -1,6 +1,6 @@
 Steps:
 
-1) add willow functionality: check line 79 where you added oak log functionality which is used to drop oak logs but not properly cut them
-    a) to add this, extend timers so you can chop the tree a while
-
-3) create new file. mining.js, that will be a mining bot. node mining.js to run :)
+Willow Functionality:
+    1) Finish Drop all on test.js (for loop assball)
+    2) create bank function
+        3) run to minimap area, take screenshot looking for bank, move mouse and deposit all, run back to willows 
