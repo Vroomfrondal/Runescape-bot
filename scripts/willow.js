@@ -21,7 +21,7 @@ function main() {
     }
 }
 
-function dropLogs() {
+/* function dropLogs() {
     let inventory_location_x = 2393
     let inventory_location_y = 1126
     let inventory_log_color = "765b37"
@@ -50,9 +50,13 @@ function dropLogs() {
     }
     //drop inventory
     
+}*/
+
+
+function bank() {
+    
+
 }
-
-
 
 function findTree() {
     let x = 300, y = 300, width = 1300, height = 400
@@ -82,25 +86,26 @@ function findTree() {
     return false
 }
 
+function confirmTree(screen_x, screen_y) {
+    //move mouse to given coordinates
+    robot.moveMouse(screen_x, screen_y)
+    //wait for help text to appear
+    sleep(300)
+    // now check color of action text
+    let check_x = 96
+    let check_y = 63
+    let pixel_color = robot.getPixelColor(check_x, check_y)
+
+    return pixel_color == "00ffff"
+}
+
+// Utility Functions
 function rotateCamera() {
     console.log("Rotating Camera")
 
     robot.keyToggle("right", "down")
     sleep(1000)
     robot.keyToggle("right", "up")
-}
-
-function confirmTree(screen_x, screen_y) {
-    //move mouse to given coordinates
-    robot.moveMouse(screen_x, screen_y)
-    //wait for help text to appear
-    sleep(300)
-    // now check color of action text (this is where it breaks)
-    let check_x = 96
-    let check_y = 63
-    let pixel_color = robot.getPixelColor(check_x, check_y)
-
-    return pixel_color == "00ffff"
 }
 
 function testScreenCapture() {
@@ -121,4 +126,5 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-main()
+//main()
+bank()
