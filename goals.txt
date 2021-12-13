@@ -5,3 +5,8 @@ Magic logs:
     2) if true, run bank()
     3) if false, continue 
 
+
+    1) start compass facing north
+    2) camera all the way down
+    3) top left tree,
+

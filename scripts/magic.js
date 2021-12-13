@@ -14,9 +14,11 @@ function main() {
         }
 
         //chop down tree found in image screenshot function
-        robot.moveMouse(tree.x, tree.y)
-        robot.mouseClick()
-        sleep(30000)
+        //robot.moveMouse(tree.x, tree.y)
+        //robot.mouseClick()
+        //sleep(40000)
+
+        bank()
     }
 }
 
@@ -31,7 +33,7 @@ function bank() {
     sleep(7000)
 
     console.log("Opening Bank.")
-    robot.moveMouse(1290, 1378)
+    robot.moveMouse(1422, 1378)
     robot.mouseClick()
     sleep(3000)
 
@@ -40,38 +42,62 @@ function bank() {
     robot.mouseClick()
     sleep(1000)
 
-    console.log("Running back to the trees...")
+    console.log("Going to cut magic tree's")
+    robot.moveMouse(2418, 99)
+    robot.mouseClick()
+    sleep(4000)
+
+    return main()
+}
+
+function findMagic() {
     robot.moveMouse(2421, 99)
+    robot.mouseClick()
+    sleep(5000)
+    robot.moveMouse(1221, 545)
     robot.mouseClick()
 }
 
 
 function findTree() {
-    let x = 300, y = 300, width = 1300, height = 400
-    let img = robot.screen.capture(x, y, width, height) //1440p screen
+    //let x = 300, y = 300, width = 1300, height = 400
+    //let img = robot.screen.capture(x, y, width, height) //1440p screen
+//
+    ////array for tree color hex values
+    //let tree_colors = ["7f7548"]
+//
+    //for (var i = 0; i < 500; i ++ ) { // iterator loop > less than 100 > increase i by 1
+    //    let random_x = getRandomInt(0, width - 1) // random int between 0-199
+    //    let random_y = getRandomInt(0, height - 1) // random int between 0-199
+    //    let sample_color = img.colorAt(random_x, random_y)
+//
+    //    if (tree_colors.includes(sample_color)) {
+    //        let screen_x = random_x + x
+    //        let screen_y = random_y + y
+    //        
+    //        if (confirmTree(screen_x, screen_y)) {
+    //            console.log("Found a tree at: " + screen_x + ", " + screen_y + ", " + " color #" + sample_color)
+    //            return {x: screen_x, y: screen_y}
+    //        } else {
+    //            console.log("Unconfirmed tree at: " + screen_x + ", " + screen_y + ", " + " color #" + sample_color)
+    //        }
+    //    }
+    //}
+    //// did not find the color in our screenshot
+    //return false
 
-    //array for tree color hex values
-    let tree_colors = ["6A5630", "645c39", "575030", "d7d7b6"]
+    robot.moveMouse(1234, 594)
+    robot.mouseClick()
+    sleep(40000)
 
-    for (var i = 0; i < 500; i ++ ) { // iterator loop > less than 100 > increase i by 1
-        let random_x = getRandomInt(0, width - 1) // random int between 0-199
-        let random_y = getRandomInt(0, height - 1) // random int between 0-199
-        let sample_color = img.colorAt(random_x, random_y)
+    robot.moveMouse(1265, 731)
+    robot.mouseClick()
+    sleep(40000)
 
-        if (tree_colors.includes(sample_color)) {
-            let screen_x = random_x + x
-            let screen_y = random_y + y
-            
-            if (confirmTree(screen_x, screen_y)) {
-                console.log("Found a tree at: " + screen_x + ", " + screen_y + ", " + " color #" + sample_color)
-                return {x: screen_x, y: screen_y}
-            } else {
-                console.log("Unconfirmed tree at: " + screen_x + ", " + screen_y + ", " + " color #" + sample_color)
-            }
-        }
-    }
-    // did not find the color in our screenshot
-    return false
+    robot.moveMouse(1234, 594)
+    robot.mouseClick()
+    sleep(4000)
+
 }
 
 function confirmTree(screen_x, screen_y) {
