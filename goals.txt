@@ -1,18 +1,7 @@
 Steps:
 
-Willow Functionality:
-    1) Finish Drop all on test.js (for loop assball)
-    2) create bank function
-        3) run to minimap area, take screenshot looking for bank, move mouse and deposit all, run back to willows 
+Magic logs:
+    1) check to see if log is in my last inventory spot
+    2) if true, run bank()
+    3) if false, continue 
 
-        to bank: 
-            1) run to minimap bank area
-                sleep and wait 
-            2) take screenshot looking for bank
-            3) confirm bank
-            4) click on bank
-                short sleep and wait
-            5) move mouse to "deposit all" button
-            6) mouseClick
-            7) minimap click to get back to willows
-            8) willows.js
