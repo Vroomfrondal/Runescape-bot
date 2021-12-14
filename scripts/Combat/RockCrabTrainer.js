@@ -16,7 +16,7 @@ function main() {
         //chop down tree found in image screenshot function
         robot.moveMouse(tree.x, tree.y)
         robot.mouseClick()
-        sleep(17000)
+        sleep(20000)
     }
 }
 
@@ -31,7 +31,7 @@ function findTree() {
 
     // make an array that contains colors of the trees we want to click on.
     // I'm targeting the brown colors of the trunks.
-    var tree_colors = ["676652", "515040", "62614D", "5E604C"];
+    var tree_colors = ["676652", "515040", "62614D", "5E604C", "62614d"];
 
     // sample up to 500 random pixels inside our screenshot until we find one that matches
     // a tree color.
@@ -47,9 +47,12 @@ function findTree() {
             var screen_x = random_x + x;
             var screen_y = random_y + y;
             
-            console.log("Found a crab at: " + screen_x + ", " + screen_y + " color " + sample_color);
-            console.log("Attacking...")
-            return {x: screen_x, y: screen_y};
+            if (confirmCrab(screen_x, screen_y)) {
+                console.log("Found a crab at: " + screen_x + ", " + screen_y + ", " + " color #" + sample_color)
+                return {x: screen_x, y: screen_y}
+            } else {
+                console.log("Unconfirmed crab at: " + screen_x + ", " + screen_y + ", " + " color #" + sample_color)
+            }
             
         }
     }
@@ -61,11 +64,11 @@ function confirmCrab(screen_x, screen_y) {
     //wait for help text to appear
     sleep(300)
     // now check color of action text (this is where it breaks)
-    let check_x = 167
+    let check_x = 76
     let check_y = 62
     let pixel_color = robot.getPixelColor(check_x, check_y)
 
-    return pixel_color == "00FF00"
+    return pixel_color == "ffff00"
 }
 
 // utility 
