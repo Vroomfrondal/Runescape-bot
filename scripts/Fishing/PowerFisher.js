@@ -1,10 +1,14 @@
 // Script Purpose:
-// Power Fishes salmon & trout in shilo village at the western most spot
+// Power Fishes salmon & trout in shilo village at the western most spot.
+// Face compass north, turn camera all the way up. Fullscreen mode. "node PowerFisher.js" in console to run
 
 // import the robotjs library
 let robot = require('robotjs') //
 
+
+console.log("--------------")
 console.log("Starting up...")
+console.log("--------------")
 sleep(2000)
 
 function main() {
@@ -20,9 +24,9 @@ function fish() {
     let starting_y = 625
 
     console.log("Fishing...")
-    sleep(200) // furnance misclick bug fix
     //loop to start fishing
     for(let i = 0; i < 5; i++) {
+        sleep(400) // furnance misclick bug fix
         robot.moveMouse(starting_x, starting_y)
         robot.mouseClick()
         sleep(10000)
@@ -54,10 +58,10 @@ function dropInventory() {
         }
     }
     console.log("Inventory dropped.")
+    console.log("------------------")
 }
 
 main()
-//dropInventory()
 
 
 
