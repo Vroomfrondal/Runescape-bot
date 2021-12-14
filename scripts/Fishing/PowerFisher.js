@@ -8,31 +8,32 @@ console.log("Starting up...")
 sleep(2000)
 
 function main() {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 500; i++) {
         dropInventory()
         fish()
-        sleep(30000)
+        sleep(20000)
     }
 }
 
 function fish() {
-    let starting_x = 1254
-    let starting_y = 613
+    let starting_x = 1264
+    let starting_y = 625
 
     console.log("Fishing...")
+    sleep(200) // furnance misclick bug fix
     //loop to start fishing
     for(let i = 0; i < 5; i++) {
         robot.moveMouse(starting_x, starting_y)
         robot.mouseClick()
-        sleep(7000)
+        sleep(10000)
 
         robot.moveMouseSmooth(starting_x + 20, starting_y + 20)
     }
 }
 
 function dropInventory() {
-    let starting_x = 1496
-    let starting_y = 660
+    let starting_x = 2388
+    let starting_y = 1119
 
     console.log("Starting to drop inventory...")
     
@@ -48,7 +49,7 @@ function dropInventory() {
             robot.moveMouse(x, y)
             robot.mouseClick('right')
             sleep(45)
-            robot.moveMouse(x, y + 39)
+            robot.moveMouse(x, y + 38)
             robot.mouseClick()
         }
     }
