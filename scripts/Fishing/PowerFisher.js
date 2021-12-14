@@ -31,8 +31,8 @@ function fish() {
 }
 
 function dropInventory() {
-    let starting_x = 2393
-    let starting_y = 1122
+    let starting_x = 1496
+    let starting_y = 660
 
     console.log("Starting to drop inventory...")
     
@@ -47,8 +47,8 @@ function dropInventory() {
             //right-click inventory to open menu, and select "drop" action
             robot.moveMouse(x, y)
             robot.mouseClick('right')
-            sleep(40)
-            robot.moveMouse(x, y + 38)
+            sleep(45)
+            robot.moveMouse(x, y + 39)
             robot.mouseClick()
         }
     }
