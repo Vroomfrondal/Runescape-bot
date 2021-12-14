@@ -4,7 +4,7 @@
 // import the robotjs library
 let robot = require('robotjs') //
 
-console.log("*Starting up*")
+console.log("Starting up...")
 sleep(2000)
 
 function main() {
@@ -57,6 +57,8 @@ function dropInventory() {
 
 main()
 //dropInventory()
+
+
 
 
 // utility functions

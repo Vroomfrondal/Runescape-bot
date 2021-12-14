@@ -7,6 +7,6 @@ Magic logs:
 
 
     1) start compass facing north
-    2) camera all the way down
+    2) camera all the way up, zoomed in
     3) top left tree,
 
