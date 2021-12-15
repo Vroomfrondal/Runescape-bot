@@ -1,7 +1,18 @@
+// Script Purpose:
+// Power Fishes salmon & trout in shilo village at the western most spot.
+// Face compass North, Camera all the way up and zoomed in. Start in front of log.
+
+
 // import the robotjs library
 let robot = require('robotjs') //
 
-function bank() {
+function main() {
+    for (let i = 0; i < 100; i ++) {
+        runLaps()
+    }
+}
+
+function runLaps() {
     sleep(4000) //debug use
 
     //move character to banking location
@@ -56,21 +67,7 @@ function bank() {
 
 }
 
-bank()
-bank()
-bank()
-bank()
-bank()
-bank()
-bank()
-bank()
-bank()
-bank()
-bank()
-bank()
-bank()
-bank()
-
+main()
 
 
 // utility functions
