@@ -1,5 +1,5 @@
 // Script Purpose:
-// Power Fishes salmon & trout in shilo village at the western most spot.
+// Automatically trains agility
 // Face compass North, Camera all the way up and zoomed in. Start in front of rope swing facing east
 
 
