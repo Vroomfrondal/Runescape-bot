@@ -9,6 +9,8 @@ let robot = require('robotjs') //
 function main() {
     for (let i = 0; i < 100; i ++) {
         runLaps()
+        console.log("Laps completed: " + i)
+        console.log("-----------------------")
     }
 }
 
