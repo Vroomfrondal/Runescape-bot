@@ -1,6 +1,6 @@
 // Script Purpose:
-// Power Fishes salmon & trout in shilo village at the western most spot.
-// Face compass north, turn camera all the way up. Fullscreen mode. "node PowerFisher.js" in console to run
+// Fishes & banks Monkfish in Piscatoras Fishing Colony.
+// Face compass north, turn camera all the way up. Fullscreen mode. 2nd to most western spot
 
 // import the robotjs library
 let robot = require('robotjs') //
