@@ -14,6 +14,7 @@ sleep(2000)
 function main() {
     for (let i = 0; i < 500; i++) {
         dropInventory()
+        sleep(300) // bug fix?
         fish()
         sleep(20000)
     }
@@ -28,10 +29,11 @@ function fish() {
     for(let i = 0; i < 5; i++) {
         sleep(400) // furnance misclick bug fix
         robot.moveMouse(starting_x, starting_y)
+        sleep(300)
         robot.mouseClick()
         sleep(10000)
 
-        robot.moveMouseSmooth(starting_x + 20, starting_y + 20)
+        robot.moveMouse(starting_x + 50, starting_y + 50)
     }
 }
 
@@ -52,7 +54,7 @@ function dropInventory() {
             //right-click inventory to open menu, and select "drop" action
             robot.moveMouse(x, y)
             robot.mouseClick('right')
-            sleep(45)
+            sleep(65)
             robot.moveMouse(x, y + 38)
             robot.mouseClick()
         }
