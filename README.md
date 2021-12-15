@@ -12,8 +12,10 @@ An automation robot for the classic 2000's game Runescape. It uses the robotjs N
 
 **Bot's Current Capabilities:**
 
-- Automation of woodcutting normal trees in lumbridge, and willow trees in draynor via index.js
-- Automation of melee training at rock crabs via rockcrabs.js
+- Rock Crab Combat Training
+- Salmon/Trout Powerfishing
+- Monkfish Fishing (with banking)
+- Normal, Willow, and Magic Woodcutting (with banking)
 
 **Installation:**
 
@@ -29,9 +31,4 @@ An automation robot for the classic 2000's game Runescape. It uses the robotjs N
 
 - NodeJS is awesome
 - Javascript libraries are a beautiful thing
-
-- Variables
-- Methods
-- While loops
-- Relative motion mouse-movements
-- JS Arrays
+- Loop magic

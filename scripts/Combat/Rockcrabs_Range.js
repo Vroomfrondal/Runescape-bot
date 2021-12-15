@@ -15,9 +15,12 @@ function main() {
 
         //chop down tree found in image screenshot function
         robot.moveMouse(tree.x, tree.y)
+        console.log(tree.x, tree.y) //debug use. uneeded code
         robot.mouseClick()
-        sleep(20000)
+        sleep(10000)
     }
+
+    
 }
 
 function findTree() {
@@ -35,7 +38,7 @@ function findTree() {
 
     // sample up to 500 random pixels inside our screenshot until we find one that matches
     // a tree color.
-    for (var i = 0; i < 750; i++) {
+    for (var i = 0; i < 1000; i++) {
         var random_x = getRandomInt(0, width-1);
         var random_y = getRandomInt(0, height-1);
         var sample_color = img.colorAt(random_x, random_y);
@@ -86,7 +89,6 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-// utility
 function sleep(ms) {
     Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 }
