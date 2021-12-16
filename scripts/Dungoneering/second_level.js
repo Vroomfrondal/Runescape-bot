@@ -15,11 +15,12 @@ function main() {
         startDungeon()
         dungoneering()
         console.log("Dungeons run: " + (i + 1))
+        console.log("-------------------------")
     }
 }
 
 function dungoneering() {
-    sleep(4000) //debug use
+    sleep(3000) //debug use
 
     console.log("Running North.")
     robot.moveMouse(2464, 60)
@@ -45,29 +46,21 @@ function dungoneering() {
     robot.mouseClick()
     sleep(7000)
 
-    console.log("Running west...")
     robot.moveMouse(2406, 133)
     sleep(300)
     robot.mouseClick()
     sleep(7000)
 
-    console.log("Continuing to run west...")
     robot.moveMouse(2411, 108)
     sleep(300)
     robot.mouseClick()
     sleep(7000)
 
-    console.log("Running to box...")
-    robot.moveMouse(2444, 122)
+    console.log("Grabbing orb from crate.")
+    robot.moveMouse(37, 548)
     sleep(300)
     robot.mouseClick()
     sleep(4000)
-
-    console.log("Grabbing orb from crate.")
-    robot.moveMouse(793, 664)
-    sleep(300)
-    robot.mouseClick()
-    sleep(3000)
 
     console.log("Equiping Weapon.")
     robot.moveMouse(2394, 1156)
@@ -75,11 +68,11 @@ function dungoneering() {
     robot.mouseClick()
     sleep(500)
 
-    console.log("Equiping Gear.")
+    console.log("Equipping Gear.")
     robot.moveMouse(2399, 1115)
     sleep(300)
     robot.mouseClick()
-    sleep(500)
+    sleep(300)
     robot.moveMouse(2435, 1119)
     sleep(300)
     robot.mouseClick()
@@ -102,28 +95,27 @@ function dungoneering() {
     robot.moveMouse(1261, 390)
     sleep(300)
     robot.mouseClick()
-    sleep(4000)
+    sleep(1600)
 
     console.log("Attack")
-    robot.moveMouse(1935, 466)
+    robot.moveMouse(1935, 463)
     sleep(300)
     robot.mouseClick()
-    sleep(30000)
-
-
+    sleep(45000)
 }
 
 function startDungeon() {
     let dung_master_location_x = 1460
     let dung_master_location_y = 547
+    let floor_number = "Floor 2"
 
-    console.log("Running to dungeon.")
+    console.log("Running to dungeon...")
     robot.moveMouse(2480, 90)
     sleep(300)
     robot.mouseClick()
     sleep(5000)
 
-    console.log("Clicking Master of Dungeoneering.")
+    console.log("Talking to the Master of Dungeoneering...")
     robot.moveMouse(dung_master_location_x, dung_master_location_y)
     sleep(300)
     robot.mouseClick('right')
@@ -133,7 +125,7 @@ function startDungeon() {
     robot.mouseClick()
     sleep(1000)
 
-    console.log("Choosing Floor")
+    console.log("Choosing Floor: " + floor_number)
     robot.moveMouse(262, 1310)
     sleep(300)
     robot.mouseClick()
@@ -141,6 +133,12 @@ function startDungeon() {
 }
 
 main()
+
+
+
+
+
+
 
 
 // utility functions
