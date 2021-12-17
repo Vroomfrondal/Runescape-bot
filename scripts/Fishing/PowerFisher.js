@@ -56,6 +56,7 @@ function dropInventory() {
             robot.mouseClick('right')
             sleep(65)
             robot.moveMouse(x, y + 38)
+            sleep(100)
             robot.mouseClick()
         }
     }

@@ -15,7 +15,7 @@ function main() {
     for (let i = 0; i < 500; i++) {
         bank()
         fish()
-        sleep(20000)
+        sleep(15000)
     }
 }
 
@@ -29,7 +29,7 @@ function fish() {
         sleep(400) // furnance misclick bug fix
         robot.moveMouse(starting_x, starting_y)
         robot.mouseClick()
-        sleep(25000)
+        sleep(17000)
 
         robot.moveMouseSmooth(starting_x + 20, starting_y + 20)
     }
