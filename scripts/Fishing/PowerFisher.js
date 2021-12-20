@@ -1,23 +1,48 @@
 // Script Purpose:
 // Power Fishes salmon & trout in shilo village at the western most spot.
-// Face compass north, turn camera all the way up. Fullscreen mode. "node PowerFisher.js" in console to run
+// Instructions: 
+// Fullscreen mode, zoom all the way in in-game. "node PowerFisher.js" in console to run.
 
 // import the robotjs library
-let robot = require('robotjs') //
+let robot = require('robotjs') 
 
-
-console.log("--------------")
 console.log("Starting up...")
 console.log("--------------")
 sleep(2000)
 
 function main() {
+    resetCamera()
+
     for (let i = 0; i < 500; i++) {
         dropInventory()
         sleep(300) // bug fix?
         fish()
         sleep(20000)
     }
+}
+
+function resetCamera() {
+    sleep(1000)
+    const compass_position_x = 2415
+    const compass_position_y = 75
+
+    //reset compass position
+    console.log("Resetting Compass in game.")
+    robot.moveMouse(compass_position_x, compass_position_y)
+    sleep(200)
+    robot.mouseClick()
+
+    //reset camera position 
+    console.log("Resetting Camera in game.")
+    robot.keyToggle("up", "down")
+    sleep(2000)
+    robot.keyToggle("up", "up")
+
+    //zoom all the way in
+    console.log("Zooming in.")
+    setTimeout(function() {
+        robot.scrollMouse(500, 0)
+    }, 2000)
 }
 
 function fish() {
