@@ -31,4 +31,5 @@ A GUI automation robot for the classic 2000's game Runescape. It uses the robotj
 
 **Sample Image of Fishing Bot**
 
--
+-![Screenshot (55)](https://user-images.githubusercontent.com/49052244/146830317-45e6b925-e40c-4b35-883f-74c85f12e9c9.png)
+
