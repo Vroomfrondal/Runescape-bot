@@ -15,9 +15,10 @@ function main() {
 
     for (let i = 0; i < 500; i++) {
         dropInventory()
-        sleep(300) // bug fix?
+        sleep(300) // bug fix
         fish()
-        sleep(20000)
+        sleep(20000) // wait for inventory to fill
+        console.log("Total trout and salmon caught: ", (i + 1) * 24)
     }
 }
 
