@@ -1,8 +1,8 @@
-# Runescape-bot (V2 in Development)
+# GUI automation bot
 
-An automation robot for the classic 2000's game Runescape. It uses the robotjs NPM library to provide mouse, keyboard, and screen bitmapping capabilities. Currently functional on oak and standard tree's in game.
+A GUI automation robot for the classic 2000's game Runescape. It uses the robotjs NPM library to provide mouse, keyboard, and screen bitmapping capabilities
 
-**A word of warning**: running this script on a Jagex owned server will most likely result in you being banned.
+**A word of warning**: running any of these scripts on a server where its not allowed, will most likely result in you being banned.
 
 **Technologies Used:**
 
@@ -12,23 +12,23 @@ An automation robot for the classic 2000's game Runescape. It uses the robotjs N
 
 **Bot's Current Capabilities:**
 
-- Rock Crab Combat Training
-- Salmon/Trout Powerfishing
-- Monkfish Fishing (with banking)
-- Normal, Willow, and Magic Woodcutting (with banking)
+- 3 Agility Scripts
+- 2 Combat Scripts
+- 2 Dungeoneering Scripts
+- 3 Fishing Scripts
+- 3 Woodcutting Scripts
 
 **Installation:**
 
 - Download and install [NodeJS](https://nodejs.org/en/download/)
 - in your console, "npm install robotjs" will install the robotsjs library
 - Use a private server (unless you want rapidly banned on Runescape). I prefer [this one](https://ikov.io/)
+- "node scriptname.js" in your console / bash to run a script
 
 **References:**
 
 - [NpmSleep](https://www.npmjs.com/package/sleep)
 
-**Key Takeaways:**
+**Sample Image of Fishing Bot**
 
-- NodeJS is awesome
-- Javascript libraries are a beautiful thing
-- Loop magic
+-
