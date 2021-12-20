@@ -1,8 +1,8 @@
-# GUI automation bot
+# GUI Automation Bot - RS
 
 A GUI automation robot for the classic 2000's game Runescape. It uses the robotjs NPM library to provide mouse, keyboard, and screen bitmapping capabilities
 
-**A word of warning**: running any of these scripts on a server where its not allowed, will most likely result in you being banned.
+**A word of warning:**: running any of these scripts on a server where its not allowed, will most likely result in you being banned.
 
 **Technologies Used:**
 
@@ -29,6 +29,6 @@ A GUI automation robot for the classic 2000's game Runescape. It uses the robotj
 
 - [NpmSleep](https://www.npmjs.com/package/sleep)
 
-**Sample Image of Fishing Bot**
+**Sample Image of Fishing Bot:**
 
 ![Screenshot (55)](https://user-images.githubusercontent.com/49052244/146830317-45e6b925-e40c-4b35-883f-74c85f12e9c9.png)
