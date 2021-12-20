@@ -2,7 +2,7 @@
 
 A GUI automation robot for the classic 2000's game Runescape. It uses the robotjs NPM library to provide mouse, keyboard, and screen bitmapping capabilities
 
-**A word of warning:**: running any of these scripts on a server where its not allowed, will most likely result in you being banned.
+**A word of warning:** running any of these scripts on a server where its not allowed, will most likely result in you being banned.
 
 **Technologies Used:**
 
