@@ -6,7 +6,7 @@ A GUI automation robot for the classic 2000's game Runescape. It uses the robotj
 
 **Technologies Used:**
 
-- RobotsJS - NPM library used for Desktop Automation. Read about it [here](https://www.npmjs.com/package/robotjs)
+- RobotsJS - NPM library used for Desktop Automation.
 - NodeJS
 - Javascript
 
@@ -28,7 +28,14 @@ A GUI automation robot for the classic 2000's game Runescape. It uses the robotj
 **References:**
 
 - [NpmSleep](https://www.npmjs.com/package/sleep)
+- [RobotJS Library](http://robotjs.io/docs/syntax)
 
 **Sample Image of Fishing Bot:**
 
 ![Screenshot (55)](https://user-images.githubusercontent.com/49052244/146830317-45e6b925-e40c-4b35-883f-74c85f12e9c9.png)
+
+**Personal Key Takeaways from Project:**
+
+- NodeJS
+- NPM Libraries
+- JS Practice: Loops, If-Statements, Arrays, Dot Notation, Logical Calculations, Syntax, Console Logging for debug usuage
