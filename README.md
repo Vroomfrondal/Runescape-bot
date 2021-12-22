@@ -37,5 +37,6 @@ A GUI automation robot for the classic 2000's game Runescape. It uses the robotj
 **Personal Key Takeaways from Project:**
 
 - NodeJS
-- NPM Libraries
+- NPM Package Manager
+- Yarn Package Manager
 - JS Practice: Loops, If-Statements, Arrays, Dot Notation, Logical Calculations, Syntax, Console Logging for debug usuage

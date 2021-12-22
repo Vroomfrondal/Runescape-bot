@@ -3,3 +3,4 @@ goals.txt
 test.js
 package-lock.json
 package.json
+yarn.lock
